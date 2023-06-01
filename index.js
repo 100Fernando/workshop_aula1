@@ -7,13 +7,13 @@ const port = 3000
 app.get('/', async (req, res) => {
 
     const connection = await mysql.createConnection({
-        host: 'sql9.freemysqlhosting.net',
-        user: 'sql9620111',
-        password: 'uAaitpTeM3',
-        database: 'sql9620111'
+        host: 'localhost',
+        user: 'co',
+        password: '123',
+        database: 'co'
     })
 
-    const [rows] = await connection.execute('SELECT * FROM clusters_co')
+    const [rows] = await connection.execute('SELECT * FROM clusters')
 
     connection.end()
 
